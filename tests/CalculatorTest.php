@@ -8,15 +8,6 @@ use App\Http\Controllers\Calculator;
 
 class CalculatorTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $this->assertTrue(true);
-    }
 
 	/**
 	 * @expectedException Exception
@@ -124,22 +115,6 @@ class CalculatorTest extends TestCase
     	$calc = new Calculator();
     	$hasil = $calc->hitung("(35 - 8) * (3/2+19) * (-3 / 12)");
     	$this->assertEquals(-138.375, $hasil);
-    }
-
-	/**
-	 * @expectedException Exception
-	 */
-    public function test17() {
-    	$calc = new Calculator();
-    	$hasil = $calc->hitung("(35 - 8 * (3/2+19) * -3) / 12)");
-    }
-
-	/**
-	 * @expectedException Exception
-	 */
-    public function test18() {
-    	$calc = new Calculator();
-    	$hasil = $calc->hitung("(35 - 8 * (3/2+19) * -3)) / 12)");
     }
 
     public function test19() {
