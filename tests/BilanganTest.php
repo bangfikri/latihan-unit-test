@@ -120,7 +120,8 @@ class BilanganTest extends TestCase
     public function test9()
     {
 		$angka = new Bilangan();
-		$terbilang = $angka->pecahan(00756);
+		#$terbilang = $angka->pecahan(00756);
+		$terbilang = $angka->pecahan(756);
 		$this->assertEquals("tujuh ratus lima puluh enam",$terbilang);
 	}
 	
