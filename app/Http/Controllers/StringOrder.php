@@ -14,17 +14,7 @@ class StringOrder extends Controller
         if(preg_match("/[^a-zA-Z ]/", $string))
             abort(404, "invalid input");
         $string = preg_replace("/[^a-zA-Z]+/", "", $string);
-        $stringPart = str_split($string);
-        sort($stringPart);
-        #$stringSorted = implode('', $stringPart);
-        $temp = '';
-        $stringSorted = '';
-        foreach ($stringPart as $value) {
-            if($value == $temp)
-                continue;
-            $stringSorted .= $value;
-            $temp = $value;
-        }
-        return $stringSorted;
+        $stringSorted = count_chars($string,3);
+        return trim($stringSorted);
     }
 }

@@ -23,7 +23,7 @@ class Bilangan extends Controller
         if($x >= 1000000000)
             abort(404, "invalid input");
 
-        $hasil = trim($this->terbilang($x));
+        $hasil = trim($this->terbilang(ltrim($x, '0')));
 
         $hasil = str_replace("  ", " ", $hasil);
 
