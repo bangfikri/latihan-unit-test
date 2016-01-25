@@ -14,9 +14,10 @@ class Calculator extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $req)
     {
-        //
+        $input = $req->input('hitung');
+        return $this->hitung($input);
     }
 
     public function hitung($str) {
